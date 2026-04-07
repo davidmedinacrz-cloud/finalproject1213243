@@ -19,3 +19,19 @@ import warnings
 warnings.warn = warn
 warnings.filterwarnings('ignore')
 
+## LLM
+def get_llm():
+    model_id = 'ibm/granite-3-2-8b-instruct'
+    parameters = {
+        .......,
+		.......,
+    }
+    project_id = "skills-network"
+    watsonx_llm = WatsonxLLM(
+        model_id=......,
+        url="https://us-south.ml.cloud.ibm.com",
+        project_id=.......,
+        params=.....,
+    )
+    return watsonx_llm
+
